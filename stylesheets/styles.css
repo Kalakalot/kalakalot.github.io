@@ -2,11 +2,6 @@ a {
   color: darkgreen;
 }
 
-/* a:hover{
-  color: darkgreen;
-  text-decoration: none;
-} */
-
 a:link{
   color: #3F8707;
   text-decoration: none;
@@ -127,11 +122,6 @@ input[type='checkbox'] {
   transition: transform .2s ease-out;
 }
 
-p a:hover{
-  color: darkgreen;
-  text-decoration: none;
-}
-
 .navbar {
   display: flex;
   width: 95%;
@@ -145,7 +135,6 @@ p a:hover{
   justify-content: space-between;
   flex-basis: 70%;
 }
-
 
 .nav-item a:link{
   color: #3F8707;
@@ -162,12 +151,17 @@ p a:hover{
 
 p {
   color: #3C2413;
+  font-family: font-family: 'Lora', serif;
+}
+
+p a:hover{
+  color: darkgreen;
+  text-decoration: none;
 }
 
 p em {
   font-style: italic;
 }
-
 
 section {
   margin-right: 6em;
