@@ -12,14 +12,14 @@ a:visited{
 }
 
 
-article h2 a:hover{
+/* article h2 a:hover{
     color: darkgreen;
     text-decoration: none;
   }
   
 article a:visited{
     color: #504D51;  text-decoration: none;
-  }
+  } */
 
 
 article img {
@@ -40,11 +40,26 @@ body {
   font-size: 1.5rem;
 }
 
+/* Styling for "read more" collapsible on blog page -- more in .lbl-toggle and .toggle. Code adapted from "Implementing a Pure CSS collapsible" on Alligator.io (https://alligator.io/css/collapsible/)  */
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+
+  transition: max-height .25s ease-in-out;
+}
+
 div img {
   float: right; 
   margin: 5% 10% 5% 10%;
   max-width: 40%;
   height: auto; 
+}
+
+.image-about {
+  float: left; 
+  margin: 2% 2% 2% 2%;
+  max-width: 40%;
+  height: auto;
 }
 
 footer p {
@@ -61,20 +76,55 @@ h1 {
 }
 
 h2 {
-  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
   font-size: 1.25em;
-  color: #2F6306
+  color: #2F6306;
 }
 
 h3 {
-  color:#7a4242;
+  color:#162A02;
   font-weight: 200;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
-header {
-  font-family: Helvetica, sans-serif
+input[type='checkbox'] {
+  display: none;
+}
+
+/* Styling for "read more" collapsible on blog page */
+.lbl-toggle {
+  display: block;
+  font-size: .8em;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #3C2413;
+  background: #F3CCBA;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
 }
 
 .navbar {
@@ -91,7 +141,7 @@ header {
   flex-basis: 70%;
 }
 
-/* 
+
 .nav-item a:link{
   color: #3F8707;
   text-decoration: none;
@@ -103,13 +153,30 @@ header {
 
 .nav-item:hover a {
   color: darkgreen;
-} */
+}
 
 p {
   color: #3C2413;
 }
 
+p em {
+  font-style: italic;
+}
+
 
 section {
   margin-right: 6em;
+}
+
+/* Final bit of styling for collapsible.*/
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 1500px;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
