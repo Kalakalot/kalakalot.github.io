@@ -2,6 +2,11 @@ a {
   color: darkgreen;
 }
 
+/* a:hover{
+  color: darkgreen;
+  text-decoration: none;
+} */
+
 a:link{
   color: #3F8707;
   text-decoration: none;
@@ -12,15 +17,10 @@ a:visited{
 }
 
 
-/* article h2 a:hover{
+article h2 a:hover{
     color: darkgreen;
     text-decoration: none;
   }
-  
-article a:visited{
-    color: #504D51;  text-decoration: none;
-  } */
-
 
 article img {
   border-radius: 20%;
@@ -127,6 +127,11 @@ input[type='checkbox'] {
   transition: transform .2s ease-out;
 }
 
+p a:hover{
+  color: darkgreen;
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   width: 95%;
@@ -149,7 +154,7 @@ input[type='checkbox'] {
 
 .nav-item a:visited{
   color: #786A7B;  text-decoration: none;
-};
+}
 
 .nav-item:hover a {
   color: darkgreen;
